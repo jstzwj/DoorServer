@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>444</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>门禁管理系统</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>总控制台</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_SelectAll">
+          <property name="text">
+           <string>全选</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_Listen">
+          <property name="text">
+           <string>监控</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_StopListen">
+          <property name="text">
+           <string>停止监控</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_Check">
+          <property name="text">
+           <string>校准信息</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_Find">
+          <property name="text">
+           <string>查找</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>所有区域</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QTableWidget" name="tableWidget_RoomTable">
+       <column>
+        <property name="text">
+         <string>房间名称</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>房间状态</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTableWidget" name="tableWidget_MessageTable">
+       <column>
+        <property name="text">
+         <string>消息类型</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>房间</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>执行时刻</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>描述</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>信息</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_backup"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <addaction name="action_controller"/>
+    <addaction name="action_area"/>
+    <addaction name="action_department"/>
+    <addaction name="action_user"/>
+    <addaction name="action_lost"/>
+    <addaction name="separator"/>
+    <addaction name="action_access"/>
+    <addaction name="action_password"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>操作</string>
+    </property>
+    <addaction name="action_selectall"/>
+    <addaction name="action_listen"/>
+    <addaction name="action_stop"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_feedback"/>
+    <addaction name="action_about"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="action_change"/>
+    <addaction name="action_option"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_backup">
+   <property name="text">
+    <string>备份和恢复数据库</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_controller">
+   <property name="text">
+    <string>控制器</string>
+   </property>
+  </action>
+  <action name="action_area">
+   <property name="text">
+    <string>区域</string>
+   </property>
+  </action>
+  <action name="action_department">
+   <property name="text">
+    <string>部门</string>
+   </property>
+  </action>
+  <action name="action_user">
+   <property name="text">
+    <string>用户</string>
+   </property>
+  </action>
+  <action name="action_lost">
+   <property name="text">
+    <string>挂失</string>
+   </property>
+  </action>
+  <action name="action_access">
+   <property name="text">
+    <string>权限</string>
+   </property>
+  </action>
+  <action name="action_password">
+   <property name="text">
+    <string>密码管理</string>
+   </property>
+  </action>
+  <action name="action_selectall">
+   <property name="text">
+    <string>全选</string>
+   </property>
+  </action>
+  <action name="action_listen">
+   <property name="text">
+    <string>监控</string>
+   </property>
+  </action>
+  <action name="action_stop">
+   <property name="text">
+    <string>停止</string>
+   </property>
+  </action>
+  <action name="action_change">
+   <property name="text">
+    <string>修改登陆用户名和密码</string>
+   </property>
+  </action>
+  <action name="action_option">
+   <property name="text">
+    <string>选项</string>
+   </property>
+  </action>
+  <action name="action_feedback">
+   <property name="text">
+    <string>反馈</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
